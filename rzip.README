@@ -1,0 +1,105 @@
+rzip
+------------------------------------------
+
+Compression program to use long distance redundancies in files
+
+A compression program able to take advantage of long distance
+redundancies in files, allowing greater compression ratios. rzip uses
+a history buffer of up to 900MB, while gzip uses 32KB and bzip2 uses
+900KB. rzip cannot read from the standard input or write to the
+standard output.
+
+A large buffer means it can find matching pieces of the input file
+over huge distances compared to other commonly used compression
+programs. The gzip program by comparison uses a history buffer of 32
+kbyte and bzip2 uses a history buffer of 900 kbyte. The second
+advantage of rzip over bzip2 is that it is usually faster.
+
+The disadvantages are that you can't pipeline rzip (so it can't read
+from standard input or write to standard output), and that it uses
+lots of memory. A typical compression run on a large file might use a
+couple of hundred MB of ram. If you have ram to burn and want the best
+possible compression rate then rzip is probably for you, otherwise
+stick with bzip2 or gzip.
+
+See article "Which Zip Is Right For You?" by Jeremy Zawodny for
+comparison (rzip could compress 8:1)
+http://www.linux-mag.com/2004-06/diy_01.html
+
+In the following are the compression ratios of the large-corpus for
+rzip 2.0, gzip 1.3.5 and bzip2 1.0.2. In all cases the programs were
+run with their maximum compresion options:
+
+    File Name               rzip    gzip    bzip2
+    large-corpus/archive    6.03    3.64    4.97
+    large-corpus/emacs      5.08    3.66    4.62
+    large-corpus/linux      5.54    4.24    5.23
+    large-corpus/samba      9.55    3.50    4.78
+    large-corpus/spamfile   29.95   8.43    14.23
+
+Runtime requirements:
+  cygwin
+  libbz2_1
+
+Build requirements:
+  cygwin
+  libbz2-devel
+
+Canonical homepage:
+  http://rzip.samba.org
+  http://packages.debian.org/rzip
+
+Canonical download:
+  http://rzip.samba.org/ftp/rzip
+  http://packages.debian.org/rzip
+
+Version control repository:
+  cvs -d :pserver:cvs@pserver.samba.org:/cvsroot co rzip
+
+Mailing list:
+
+Forum / Wiki:
+
+IRC channel:
+
+Upstream contact:
+  Author: Andrew Tridgell <rzip@tridgell.net>
+  Bugs: <bugs-rzip@tridgell.net>
+
+License:
+  GPL
+
+Language:
+  C
+
+------------------------------------
+
+Build instructions:
+  unpack rzip-2.1-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+    unpacked under /usr/src automatically
+  cd /usr/src
+  ./rzip*.sh all
+
+This will create:
+  rzip-2.1-1.tar.bz2
+  rzip-2.1-1-src.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary distro:
+
+/usr/bin/rzip.exe
+/usr/share/doc/Cygwin/rzip-2.1.README
+/usr/share/doc/rzip-2.1/COPYING
+/usr/share/man/man1/rzip.1.gz
+
+------------------
+
+Port Notes:
+
+----- version 2.1-1 -----
+- Initial release 2007-12-20 Jari Aalto
+
+Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
+Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later

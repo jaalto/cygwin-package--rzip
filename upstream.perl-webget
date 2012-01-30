@@ -1,0 +1,2 @@
+tag1: rzip
+  http://packages.debian.org/unstable/rzip pregexp:orig.tar.gz file:rzip_2.1.orig.tar.gz new: x:
