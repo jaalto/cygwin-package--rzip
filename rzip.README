@@ -75,31 +75,30 @@ Language:
 ------------------------------------
 
 Build instructions:
-  unpack rzip-2.1-1-src.tar.bz2
+  unpack rzip-2.1-2-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./rzip*.sh all
 
 This will create:
-  rzip-2.1-1.tar.bz2
-  rzip-2.1-1-src.tar.bz2
+  rzip-2.1-2.tar.xz
+  rzip-2.1-2-src.tar.xz
 
 -------------------------------------------
 
 Files included in the binary distro:
-
-/usr/bin/rzip.exe
-/usr/share/doc/Cygwin/rzip-2.1.README
-/usr/share/doc/rzip-2.1/COPYING
-/usr/share/man/man1/rzip.1.gz
+  See Cygwin package archive
 
 ------------------
 
 Port Notes:
 
+----- version 2.1-2 -----
+- New upstream release 2014-06-10 Jari Aalto
+
 ----- version 2.1-1 -----
 - Initial release 2007-12-20 Jari Aalto
 
 Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
-Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later
+Copyright (C) 2007-2014 Jari Aalto; Licenced under GPL v2 or later

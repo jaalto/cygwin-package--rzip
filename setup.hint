@@ -5,4 +5,4 @@ a history buffer of up to 900MB, while gzip uses 32KB and bzip2 uses
 900KB. rzip cannot read from the standard input or write to the
 standard output."
 category: Utils
-requires: cygwin libbz2_1
+requires: libbz2_1
